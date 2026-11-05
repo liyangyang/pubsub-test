@@ -1,0 +1,38 @@
+package org.yangli.test.interview.v1;
+
+import java.util.StringJoiner;
+
+public class RequestMessage {
+
+    private String id;
+    private String content;
+
+    public RequestMessage(String id, String content) {
+        this.id = id;
+        this.content = content;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", RequestMessage.class.getSimpleName() + "[", "]")
+                .add("id='" + id + "'")
+                .add("content='" + content + "'")
+                .toString();
+    }
+}
